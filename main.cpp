@@ -1,10 +1,18 @@
 #include <iostream>
+#include "musictrackhandler.h"
+#include "unistd.h"
 
-using namespace std;
 
-int main()
+int main(int, char ** argv)
 {
-    cout << "Hello World!" << endl;
+    DiscoPartyHider::MusicTrackHandler mth;
+    mth.loadTrack(argv[1]);
+    mth.playTrack();
+
+    while(true)
+    {//temprorary to not let process end
+        sleep(1);
+    }
     return 0;
 }
 

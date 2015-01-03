@@ -10,7 +10,7 @@ int main(int, char ** argv)
     mth.playTrack();
 
     while(true)
-    {//temprorary to not let process end
+    {//temporary fix to not let process end
         sleep(1);
     }
     return 0;
